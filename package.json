@@ -1,0 +1,25 @@
+{
+  "name": "crusty",
+  "version": "1.0.0",
+  "description": "Rust-like error handling",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduwr/crusty.git"
+  },
+  "keywords": [
+    "Rust",
+    "Error",
+    "handling",
+    "Typescript"
+  ],
+  "author": "Eduardo Ricardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduwr/crusty/issues"
+  },
+  "homepage": "https://github.com/eduwr/crusty#readme"
+}
