@@ -2,24 +2,34 @@
   "name": "crusty",
   "version": "1.0.0",
   "description": "Rust-like error handling",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "yarn test"
+    "build": "tsup",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eduwr/crusty.git"
   },
   "keywords": [
-    "Rust",
-    "Error",
-    "handling",
-    "Typescript"
+    "Error handling",
+    "Typescript",
+    "Result"
   ],
   "author": "Eduardo Ricardo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eduwr/crusty/issues"
   },
-  "homepage": "https://github.com/eduwr/crusty#readme"
+  "homepage": "https://github.com/eduwr/crusty#readme",
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3"
+  }
 }
