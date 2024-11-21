@@ -13,13 +13,13 @@ A simple and type-safe utility for handling success and error values in TypeScri
 Install the package using npm:
 
 ```bash
-npm install result-type
+npm install crusty
 ```
 
 Or with yarn:
 
 ```bash
-yarn add result-type
+yarn add crusty
 ```
 
 ## Usage
@@ -50,7 +50,7 @@ export type Result<T, E> = Ok<T> | Err<E>;
 Use the `ok` and `err` functions to create `Result` instances.
 
 ```typescript
-import { ok, err, Result } from 'result-type';
+import { ok, err, Result } from 'crusty';
 
 // Success case
 const success: Result<number, string> = ok(42);
@@ -64,7 +64,7 @@ const failure: Result<number, string> = err("Something went wrong");
 The utility provides `isOk` and `isErr` functions to check whether a `Result` is `Ok` or `Err`.
 
 ```typescript
-import { isOk, isErr } from 'result-type';
+import { isOk, isErr } from 'crusty';
 
 if (isOk(success)) {
   console.log("Success:", success.value);
@@ -82,7 +82,7 @@ Safely extract the value from an `Ok` result or handle an `Err` with fallback op
 - `unwrapOrElse`: Calls a fallback function if the result is `Err`.
 
 ```typescript
-import { unwrap, unwrapOr, unwrapOrElse } from 'result-type';
+import { unwrap, unwrapOr, unwrapOrElse } from 'crusty';
 
 const value = unwrap(success); // 42
 const defaultValue = unwrapOr(failure, 0); // 0
@@ -144,7 +144,7 @@ Transforms the error of an `Err` result, or returns the original `Ok`.
 ## Example
 
 ```typescript
-import { ok, err, Result, isOk, unwrapOr } from 'result-type';
+import { ok, err, Result, isOk, unwrapOr } from 'crusty';
 
 function divide(a: number, b: number): Result<number, string> {
   if (b === 0) {
