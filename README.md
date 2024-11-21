@@ -97,7 +97,7 @@ Transform `Result` values with `map` and `mapErr` functions.
 - `mapErr`: Applies a function to the error of an `Err` result.
 
 ```typescript
-import { map, mapErr } from 'result-type';
+import { map, mapErr } from 'crusty';
 
 const incremented = map(success, (value) => value + 1); // Ok(43)
 const detailedError = mapErr(failure, (error) => `Error: ${error}`); // Err("Error: Something went wrong")
